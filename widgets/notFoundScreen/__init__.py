@@ -1,0 +1,1 @@
+from .notFound import Application as NotFoundView

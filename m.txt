@@ -1,0 +1,37 @@
+p.horizontal_alignment = CrossAxisAlignment.CENTER
+    
+    p.appbar = AppBar(
+        leading=Icon(icons.HOME),
+        bgcolor=colors.BLACK,
+        title=Text(
+            value="WitAnime App!",
+            color=colors.WHITE
+        ),
+        actions=[
+            IconButton(
+                icon=icons.FAVORITE,
+                url="https://nnko0o.t.me/"
+            )
+        ]
+    )
+   
+    Application = mainView(p)
+    _c = Container(
+        width=720,
+        height=600,
+        bgcolor=colors.BLACK,
+        content=Stack(
+            width=350,
+            height=550,
+            controls=[
+                Application
+            ],
+
+        ),
+        border_radius=25,
+        padding=padding.all(10)
+    )
+
+    await p.add_async(
+        _c
+    )
