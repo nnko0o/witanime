@@ -1,5 +1,6 @@
 from flet import *
 from moudels.witanime import Anime
+from widgets.animeScreen.episodeWidget import EpisodeWidget
 from typing import Dict, Any
 
 class Application(UserControl):
@@ -92,6 +93,10 @@ class Application(UserControl):
                     ),
 
                     Text(value="Test"),
+                    EpisodeWidget(
+                        1,
+                        "https://mega.nz/file/34554"
+                    ),
 
                 ],
                 spacing=5,
